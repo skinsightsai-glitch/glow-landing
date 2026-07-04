@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+  <html lang="en">
+  <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Glow — by Skinsights.Ai</title>
+  <meta name="description" content="Glow is an AI skin companion that helps you understand your skin, track your progress, and build routines that actually work. Sign up for early access.">
+  <style>
+    :root {
+      --primary: #8A7CA8;
+    --primary-light: #A595C4;
+          --accent: #D8C9A3;
+          --accent-light: #E8DEC4;
+          --text: #161616;
+    --text-secondary: #5C5754;
+    --text-muted: #9C948B;
+    --background: #F6F1EA;
+          --surface: #FFFFFF;
+          --surface-dim: #EDE6DA;
+          --border: #E2D9CB;
+          --ink: #0E0E0E;
+}
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+        font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif;
+    background: var(--background);
+    color: var(--text);
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+}
+
+  .wrap {
+        max-width: 560px;
+    margin: 0 auto;
+    padding: 0 24px;
+}
+
+  header {
+        padding: 40px 0 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+  header img {
+        width: 28px;
+    height: 28px;
+    border-radius: 8px;
+    display: block;
+  }
+
+  .logo {
+        font-size: 13px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    font-weight: 600;
+}
+
+  .hero {
+        text-align: center;
+    padding: 32px 0 28px;
+}
+
+  .hero h1 {
+        font-family: Georgia, "Times New Roman", serif;
+    font-size: 44px;
+    font-weight: 400;
+    letter-spacing: -0.01em;
+    color: var(--ink);
+    margin-bottom: 16px;
+  }
+
+  .hero p {
+        font-size: 17px;
+    color: var(--text-secondary);
+    max-width: 380px;
+    margin: 0 auto;
+}
+
+  .hero-photo {
+        width: 100%;
+    border-radius: 28px;
+    margin: 8px 0 32px;
+    overflow: hidden;
+    position: relative;
+}
+
+  .hero-photo img {
+        width: 100%;
+    display: block;
+    object-fit: cover;
+}
+
+  .cta-group {
+        display: flex;
+    flex-direction: column;
+    gap: 12px;
+    padding-bottom: 44px;
+}
+
+  .btn {
+        display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 16px 20px;
+    border-radius: 20px;
+    font-size: 15px;
+    font-weight: 600;
+    text-decoration: none;
+    text-align: center;
+    border: 1px solid transparent;
+    transition: opacity 0.15s ease, transform 0.15s ease;
+  }
+
+  .btn:active { transform: scale(0.98); }
+
+  .btn-primary {
+        background: var(--primary);
+    color: #FFFFFF;
+    }
+  .btn-primary:hover { opacity: 0.92; }
+
+  .btn-secondary {
+        background: var(--surface);
+    color: var(--text);
+    border: 1px solid var(--border);
+}
+  .btn-secondary:hover { background: var(--surface-dim); }
+
+  .btn-disabled {
+        background: var(--surface-dim);
+    color: var(--text-muted);
+    cursor: default;
+    position: relative;
+}
+
+  .badge {
+        font-size: 10px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    background: var(--accent);
+    color: var(--ink);
+    padding: 2px 8px;
+    border-radius: 10px;
+    font-weight: 700;
+}
+
+  section.copy {
+    padding: 8px 0 44px;
+    border-top: 1px solid var(--border);
+  }
+
+  section.copy h2 {
+        font-family: Georgia, "Times New Roman", serif;
+    font-weight: 400;
+    font-size: 24px;
+    color: var(--ink);
+    margin: 32px 0 12px;
+}
+
+  section.copy p {
+        font-size: 15px;
+    color: var(--text-secondary);
+}
+
+  section.copy p + p { margin-top: 12px; }
+
+  .gallery {
+        padding: 8px 0 44px;
+    border-top: 1px solid var(--border);
+  }
+
+  .gallery h2 {
+        font-family: Georgia, "Times New Roman", serif;
+    font-weight: 400;
+    font-size: 24px;
+    color: var(--ink);
+    margin: 32px 0 8px;
+  }
+
+  .gallery > p {
+        font-size: 15px;
+    color: var(--text-secondary);
+    margin-bottom: 20px;
+}
+
+  .gallery-grid {
+        display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+}
+
+  .gallery-grid figure {
+        border-radius: 20px;
+    overflow: hidden;
+    background: var(--surface);
+}
+
+  .gallery-grid img {
+        width: 100%;
+    height: 160px;
+    object-fit: cover;
+    display: block;
+}
+
+  .gallery-grid figcaption {
+        font-size: 12px;
+    color: var(--text-secondary);
+    font-weight: 600;
+    padding: 10px 12px 12px;
+}
+
+  .features {
+        display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+    padding: 32px 0 44px;
+    border-top: 1px solid var(--border);
+}
+
+  .feature {
+        text-align: center;
+}
+
+  .feature .icon {
+    font-size: 22px;
+    margin-bottom: 8px;
+  }
+
+  .feature .label {
+    font-size: 12px;
+    color: var(--text-secondary);
+    font-weight: 600;
+  }
+
+  .signup-cta {
+        text-align: center;
+    padding: 8px 0 44px;
+    border-top: 1px solid var(--border);
+}
+
+  .signup-cta h2 {
+        font-family: Georgia, "Times New Roman", serif;
+    font-weight: 400;
+    font-size: 24px;
+    color: var(--ink);
+    margin: 32px 0 12px;
+}
+
+  .signup-cta p {
+        font-size: 15px;
+    color: var(--text-secondary);
+    max-width: 380px;
+    margin: 0 auto 24px;
+}
+
+  footer {
+        text-align: center;
+    padding: 24px 0 48px;
+    color: var(--text-muted);
+    font-size: 12px;
+    border-top: 1px solid var(--border);
+}
+
+  footer a { color: var(--text-muted); }
+</style>
+  </head>
+  <body>
+    <div class="wrap">
+      <header>
+        <img src="images/mascot.png" alt="Glow mascot">
+        <div class="logo">Skinsights · Ai</div>
+      </header>
+
+      <section class="hero">
+        <h1>Glow</h1>
+        <p>An AI skin companion that helps you actually understand your skin — not just another routine app.</p>
+      </section>
+
+      <div class="hero-photo">
+        <img src="images/hero.jpg" alt="Editorial portrait, part of the Glow onboarding experience">
+      </div>
+
+      <div class="cta-group">
+        <a class="btn btn-disabled" aria-disabled="true">
+          Download on the App Store <span class="badge">Coming Soon</span>
+      </a>
+      <a class="btn btn-primary" href="https://docs.google.com/forms/d/e/1FAIpQLSc-uDgn9hiQAlwNbaB6N1YJQjfL8gS4V76rv1bG-pQ3cUV9-A/viewform?usp=header" target="_blank" rel="noopener">
+          Join the Waitlist
+      </a>
+      <a class="btn btn-secondary" href="#testflight-beta">
+        Try the TestFlight Beta <span class="badge">Coming Soon</span>
+        </a>
+      </div>
+
+      <section class="copy">
+        <h2>What we're building</h2>
+        <p>Most skincare apps guess. Glow looks. Take a scan and get a real read on your skin — texture, tone, breakouts, progress over time — instead of another generic routine built for no one in particular.</p>
+        <p>From there, Glow builds a routine around your skin specifically, and keeps adjusting it as your skin changes. No shame, no filters, no "flawless skin" pressure — just a clearer picture and a plan that fits.</p>
+        <p>We're building this in the open with our community. This page is our very first home on the web — and if you sign up below, you'll be some of the first people to get in.</p>
+      </section>
+
+      <section class="gallery">
+        <h2>A few design glimpses</h2>
+        <p>Early looks at the product and the world we're building around it.</p>
+        <div class="gallery-grid">
+          <figure>
+            <img src="images/glimpse-scan.jpg" alt="Skin scan concept across skin tones">
+            <figcaption>Skin scan, for every skin tone</figcaption>
+        </figure>
+        <figure>
+          <img src="images/glimpse-goals.jpg" alt="Editorial photo from the Glow onboarding flow">
+          <figcaption>Real skin, real onboarding</figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <section class="features">
+        <div class="feature">
+          <div class="icon">🔍</div>
+          <div class="label">Skin Scan</div>
+        </div>
+        <div class="feature">
+          <div class="icon">🧴</div>
+          <div class="label">Routines</div>
+        </div>
+        <div class="feature">
+          <div class="icon">📈</div>
+          <div class="label">Progress</div>
+        </div>
+      </section>
+
+      <section class="signup-cta">
+        <h2>Come glow with us</h2>
+        <p>Sign up to hear when Glow launches, get early access, and help shape the app as we build it.</p>
+      <a class="btn btn-primary" href="https://docs.google.com/forms/d/e/1FAIpQLSc-uDgn9hiQAlwNbaB6N1YJQjfL8gS4V76rv1bG-pQ3cUV9-A/viewform?usp=header" target="_blank" rel="noopener" style="display:inline-flex;">
+          Join the Waitlist
+      </a>
+    </section>
+
+    <footer>
+      &copy; 2026 Skinsights.Ai
+      </footer>
+    </div>
+  </body>
+  </html>
+  
