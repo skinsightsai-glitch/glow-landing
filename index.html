@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Glow — by Skinsights.Ai</title>
+<title>Glow</title>
 <meta name="description" content="Glow makes skincare a daily habit you actually enjoy — streaks, ingredient know-how, and acne positivity, no shame included. Sign up for early access.">
 <style>
   :root {
@@ -38,36 +38,32 @@
   }
 
   header {
-    padding: 40px 0 0;
+    padding: 44px 0 0;
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 10px;
   }
 
-  header img {
-    width: 28px;
-    height: 28px;
-    border-radius: 8px;
+  @keyframes bob {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-12px); }
+  }
+
+  .mascot-hero {
+    width: 108px;
+    height: 108px;
     display: block;
-  }
-
-  .logo {
-    font-size: 13px;
-    letter-spacing: 0.18em;
-    text-transform: uppercase;
-    color: var(--text-muted);
-    font-weight: 600;
+    animation: bob 2.6s ease-in-out infinite;
   }
 
   .hero {
     text-align: center;
-    padding: 32px 0 28px;
+    padding: 12px 0 28px;
   }
 
   .hero h1 {
     font-family: Georgia, "Times New Roman", serif;
-    font-size: 44px;
+    font-size: 48px;
     font-weight: 400;
     letter-spacing: -0.01em;
     color: var(--ink);
@@ -267,7 +263,6 @@
     font-size: 11px;
     font-weight: 700;
     color: var(--primary);
-    background: var(--primary-light);
     background: color-mix(in srgb, var(--primary) 15%, white);
     padding: 3px 8px;
     border-radius: 8px;
@@ -354,7 +349,7 @@
     width: 76px;
     height: 76px;
     border-radius: 50%;
-    background: conic-gradient(var(--good, #50C878) 0deg 295deg, var(--surface-dim) 295deg 360deg);
+    background: conic-gradient(#50C878 0deg 295deg, var(--surface-dim) 295deg 360deg);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -482,6 +477,50 @@
     margin-top: 10px;
   }
 
+  /* Founder note */
+  .founder {
+    padding-bottom: 44px;
+  }
+
+  .founder p {
+    font-size: 15px;
+    color: var(--text-secondary);
+  }
+
+  .founder p + p { margin-top: 12px; }
+
+  .founder-sign {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 15px;
+    color: var(--ink);
+    margin-top: 14px;
+  }
+
+  .badges-label {
+    font-size: 11px;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    font-weight: 700;
+    margin: 24px 0 10px;
+  }
+
+  .badges {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  .badge-pill {
+    font-size: 12px;
+    font-weight: 700;
+    color: var(--ink);
+    background: var(--surface);
+    border: 1px solid var(--border);
+    padding: 8px 14px;
+    border-radius: 999px;
+  }
+
   .gallery {
     padding: 8px 0 44px;
     border-top: 1px solid var(--border);
@@ -552,7 +591,7 @@
 
   .signup-cta {
     text-align: center;
-    padding: 8px 0 44px;
+    padding: 8px 0 24px;
     border-top: 1px solid var(--border);
   }
 
@@ -594,6 +633,23 @@
     display: inline-block;
   }
 
+  .social-row {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    margin-top: 18px;
+    padding-bottom: 24px;
+  }
+
+  .social-row a {
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--text-secondary);
+    text-decoration: none;
+  }
+
+  .social-row a:hover { color: var(--primary); }
+
   footer {
     text-align: center;
     padding: 24px 0 48px;
@@ -608,8 +664,7 @@
 <body>
   <div class="wrap">
     <header>
-      <img src="mascot.png" alt="Glow mascot">
-      <div class="logo">Skinsights · Ai</div>
+      <img src="mascot.png" alt="Glow mascot" class="mascot-hero">
     </header>
 
     <section class="hero">
@@ -618,7 +673,7 @@
     </section>
 
     <figure class="hero-photo">
-      <img src="hero-trio.jpg" alt="Three real people from Glow's onboarding photos, side by side">
+      <img src="hero-quad.jpg" alt="Four real people from Glow's onboarding photos, side by side">
       <figcaption>Real skin, every tone, no filters.</figcaption>
     </figure>
 
@@ -760,6 +815,18 @@
       <p>Acne positivity isn't a nice-to-have feature for us. It's the baseline everything else is built on.</p>
     </section>
 
+    <section class="section-head founder">
+      <h2>A note from the founder</h2>
+      <p>I built Glow because I went through cystic acne myself — the kind that doesn't just affect your skin, it affects how you show up in the world. I know what it's like to avoid photos, cancel plans, and feel like your skin is the first thing people see.</p>
+      <p>Glow is the tool I wish I'd had: something that helped me understand my skin instead of just judging it. That's the whole reason this exists.</p>
+      <div class="badges-label">Recognized along the way by</div>
+      <div class="badges">
+        <span class="badge-pill">a16z</span>
+        <span class="badge-pill">CorePower Yoga</span>
+        <span class="badge-pill">Fox School of Business — Innovation Competition</span>
+      </div>
+    </section>
+
     <section class="gallery">
       <h2>A few design glimpses</h2>
       <p>Early looks at the streaks, skin stories, and ingredient learning we're building.</p>
@@ -801,10 +868,14 @@
       <a class="whatsapp-link" href="https://chat.whatsapp.com/CRLqXeVvA0i3LbHREFQffk" target="_blank" rel="noopener">
         <span class="dot"></span> Prefer to chat? Join our WhatsApp community
       </a>
+      <div class="social-row">
+        <a href="https://www.instagram.com/glow.acne/" target="_blank" rel="noopener">@glow.acne on Instagram</a>
+        <a href="https://www.tiktok.com/@glow.acne" target="_blank" rel="noopener">@glow.acne on TikTok</a>
+      </div>
     </section>
 
     <footer>
-      &copy; 2026 Skinsights.Ai
+      &copy; 2026 Glow
     </footer>
   </div>
 </body>
