@@ -521,6 +521,42 @@
     border-radius: 999px;
   }
 
+  .badge-pill.a16z {
+    background: #5C0F1F;
+    color: #E7DFC7;
+    border: none;
+    font-weight: 800;
+    letter-spacing: 0.03em;
+    font-size: 13px;
+  }
+
+  .badge-pill.corepower {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    background: #FFFFFF;
+  }
+
+  .badge-pill.corepower .cp-dot {
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background: radial-gradient(circle, #000 0 32%, #F5821F 32% 56%, #FDB827 56% 100%);
+    flex-shrink: 0;
+  }
+
+  .badge-pill.corepower .cp-text {
+    color: #111111;
+    font-weight: 700;
+  }
+
+  .badge-pill.corepower .cp-yoga {
+    color: #F5821F;
+    font-weight: 800;
+    letter-spacing: 0.06em;
+    margin-left: 1px;
+  }
+
   .gallery {
     padding: 8px 0 44px;
     border-top: 1px solid var(--border);
@@ -821,8 +857,8 @@
       <p>Glow is the tool I wish I'd had: something that helped me understand my skin instead of just judging it. That's the whole reason this exists.</p>
       <div class="badges-label">Recognized along the way by</div>
       <div class="badges">
-        <span class="badge-pill">a16z</span>
-        <span class="badge-pill">CorePower Yoga</span>
+        <span class="badge-pill a16z">a16z</span>
+        <span class="badge-pill corepower"><span class="cp-dot"></span><span class="cp-text">corepower</span><span class="cp-yoga">YOGA</span></span>
         <span class="badge-pill">Fox School of Business — Innovation Competition</span>
       </div>
     </section>
