@@ -95,6 +95,13 @@
     object-fit: cover;
   }
 
+  .hero-photo figcaption {
+    font-size: 11px;
+    color: var(--text-muted);
+    text-align: center;
+    padding-top: 8px;
+  }
+
   .cta-group {
     display: flex;
     flex-direction: column;
@@ -169,6 +176,311 @@
   }
 
   section.copy p + p { margin-top: 12px; }
+
+  .section-head {
+    padding-top: 8px;
+    border-top: 1px solid var(--border);
+  }
+
+  .section-head h2 {
+    font-family: Georgia, "Times New Roman", serif;
+    font-weight: 400;
+    font-size: 24px;
+    color: var(--ink);
+    margin: 32px 0 8px;
+  }
+
+  .section-head > p {
+    font-size: 15px;
+    color: var(--text-secondary);
+    margin-bottom: 24px;
+  }
+
+  /* How it works steps */
+  .steps {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    padding-bottom: 44px;
+  }
+
+  .step {
+    display: flex;
+    gap: 14px;
+    align-items: flex-start;
+  }
+
+  .step-num {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background: var(--primary);
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 13px;
+    flex-shrink: 0;
+    margin-top: 2px;
+  }
+
+  .step-content { flex: 1; min-width: 0; }
+
+  .step-content h3 {
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--ink);
+    margin-bottom: 4px;
+  }
+
+  .step-content p {
+    font-size: 14px;
+    color: var(--text-secondary);
+    margin-bottom: 12px;
+  }
+
+  /* Mock screen shared style */
+  .mock {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 18px;
+    padding: 16px;
+  }
+
+  .mock-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 10px;
+  }
+
+  .mock-label {
+    font-size: 11px;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    font-weight: 700;
+  }
+
+  .mock-tag {
+    font-size: 11px;
+    font-weight: 700;
+    color: var(--primary);
+    background: var(--primary-light);
+    background: color-mix(in srgb, var(--primary) 15%, white);
+    padding: 3px 8px;
+    border-radius: 8px;
+  }
+
+  .scan-ring {
+    width: 88px;
+    height: 88px;
+    border-radius: 50%;
+    margin: 6px auto 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: conic-gradient(var(--primary) 0deg 300deg, var(--surface-dim) 300deg 360deg);
+  }
+
+  .scan-ring span {
+    width: 72px;
+    height: 72px;
+    border-radius: 50%;
+    background: var(--surface);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+  }
+
+  .chip-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  .chip {
+    font-size: 12px;
+    font-weight: 600;
+    background: var(--background);
+    border: 1px solid var(--border);
+    padding: 7px 12px;
+    border-radius: 999px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+  }
+
+  .chip .ok { color: #50C878; font-weight: 900; }
+
+  .streak-row {
+    display: flex;
+    gap: 6px;
+    margin-bottom: 10px;
+  }
+
+  .streak-dot {
+    flex: 1;
+    height: 8px;
+    border-radius: 4px;
+    background: var(--primary);
+  }
+
+  .streak-dot.off { background: var(--surface-dim); }
+
+  .streak-count {
+    font-size: 22px;
+    font-weight: 700;
+    color: var(--ink);
+  }
+
+  .streak-count .flame { font-size: 18px; }
+
+  /* Dashboard preview mock */
+  .dash-mock {
+    padding-bottom: 44px;
+  }
+
+  .dash-card {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 16px;
+  }
+
+  .dash-score-ring {
+    width: 76px;
+    height: 76px;
+    border-radius: 50%;
+    background: conic-gradient(var(--good, #50C878) 0deg 295deg, var(--surface-dim) 295deg 360deg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+  }
+
+  .dash-score-ring span {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: var(--surface);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--ink);
+  }
+
+  .dash-score-label { font-size: 13px; color: var(--text-secondary); }
+  .dash-score-label strong { display: block; font-size: 15px; color: var(--ink); margin-bottom: 2px; }
+
+  .checklist { display: flex; flex-direction: column; gap: 10px; }
+
+  .checklist-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 14px;
+    color: var(--text);
+  }
+
+  .checklist-item .box {
+    width: 18px;
+    height: 18px;
+    border-radius: 6px;
+    border: 1.5px solid var(--border);
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 11px;
+  }
+
+  .checklist-item.done .box {
+    background: var(--primary);
+    border-color: var(--primary);
+    color: #fff;
+  }
+
+  .checklist-item.done span.label { color: var(--text-muted); text-decoration: line-through; }
+
+  /* Education modules preview */
+  .edu-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding-bottom: 44px;
+  }
+
+  .edu-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 14px 16px;
+  }
+
+  .edu-item .edu-text h4 {
+    font-size: 14px;
+    color: var(--ink);
+    margin-bottom: 2px;
+  }
+
+  .edu-item .edu-text p {
+    font-size: 12px;
+    color: var(--text-muted);
+  }
+
+  .edu-item .edu-time {
+    font-size: 11px;
+    font-weight: 700;
+    color: var(--primary);
+    white-space: nowrap;
+  }
+
+  /* Acne positivity + stat */
+  .positivity {
+    padding-bottom: 44px;
+  }
+
+  .positivity p { font-size: 15px; color: var(--text-secondary); }
+  .positivity p + p { margin-top: 12px; }
+
+  .stat-box {
+    background: var(--ink);
+    color: #fff;
+    border-radius: 20px;
+    padding: 24px 20px;
+    text-align: center;
+    margin: 20px 0;
+  }
+
+  .stat-box .stat-num {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 48px;
+    line-height: 1;
+    color: var(--accent);
+    margin-bottom: 8px;
+  }
+
+  .stat-box .stat-text {
+    font-size: 13px;
+    color: #D9D4CC;
+    max-width: 340px;
+    margin: 0 auto;
+  }
+
+  .stat-box .stat-source {
+    font-size: 10px;
+    color: #8A857D;
+    margin-top: 10px;
+  }
 
   .gallery {
     padding: 8px 0 44px;
@@ -259,6 +571,29 @@
     margin: 0 auto 24px;
   }
 
+  .signup-cta .cta-group { padding-bottom: 0; }
+
+  .whatsapp-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    margin-top: 14px;
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--text-secondary);
+    text-decoration: none;
+  }
+
+  .whatsapp-link:hover { color: var(--primary); }
+
+  .whatsapp-link .dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #50C878;
+    display: inline-block;
+  }
+
   footer {
     text-align: center;
     padding: 24px 0 48px;
@@ -282,9 +617,10 @@
       <p>Skincare, turned into a habit you actually want to keep — daily streaks, ingredient smarts, and zero shame.</p>
     </section>
 
-    <div class="hero-photo">
-      <img src="hero.jpg" alt="Editorial portrait, part of the Glow onboarding experience">
-    </div>
+    <figure class="hero-photo">
+      <img src="hero-trio.jpg" alt="Three real people from Glow's onboarding photos, side by side">
+      <figcaption>Real skin, every tone, no filters.</figcaption>
+    </figure>
 
     <div class="cta-group">
       <a class="btn btn-disabled" aria-disabled="true">
@@ -304,6 +640,124 @@
       <p>Your skin has its own love language — what calms it, what sets it off, how it shifts with your cycle, stress, and the seasons. Glow learns that language with you over time, so the more you show up, the smarter your routine gets.</p>
       <p>And we're not into guessing. Every recommendation comes with the ingredient science behind it, so you're not just following a routine — you're learning your skin, ingredient by ingredient.</p>
       <p>We're building this in the open with our community. This page is our very first home on the web — and if you sign up below, you'll be some of the first people to get in.</p>
+    </section>
+
+    <section class="section-head">
+      <h2>How it works</h2>
+      <p>Three small habits, every day.</p>
+      <div class="steps">
+        <div class="step">
+          <div class="step-num">1</div>
+          <div class="step-content">
+            <h3>Scan your skin</h3>
+            <p>A quick, judgment-free photo check-in — about 12 seconds, no filters, no angles to hide behind.</p>
+            <div class="mock">
+              <div class="mock-row">
+                <span class="mock-label">Today's Scan</span>
+                <span class="mock-tag">12 sec</span>
+              </div>
+              <div class="scan-ring"><span>🔍</span></div>
+            </div>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-num">2</div>
+          <div class="step-content">
+            <h3>Learn the ingredients</h3>
+            <p>See exactly what's in your routine and why it's there — explained in plain English, not lab-speak.</p>
+            <div class="mock">
+              <div class="mock-row">
+                <span class="mock-label">In your routine</span>
+              </div>
+              <div class="chip-row">
+                <span class="chip"><span class="ok">✓</span> Niacinamide</span>
+                <span class="chip"><span class="ok">✓</span> Salicylic Acid</span>
+                <span class="chip"><span class="ok">✓</span> Centella</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-num">3</div>
+          <div class="step-content">
+            <h3>Keep your streak</h3>
+            <p>Show up daily and watch your skin's story unfold — one small win at a time.</p>
+            <div class="mock">
+              <div class="mock-row">
+                <span class="mock-label">This week</span>
+              </div>
+              <div class="streak-row">
+                <div class="streak-dot"></div>
+                <div class="streak-dot"></div>
+                <div class="streak-dot"></div>
+                <div class="streak-dot"></div>
+                <div class="streak-dot"></div>
+                <div class="streak-dot off"></div>
+                <div class="streak-dot off"></div>
+              </div>
+              <div class="streak-count"><span class="flame">🔥</span> 14-day streak</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-head dash-mock">
+      <h2>Your dashboard, at a glance</h2>
+      <p>Everything about your skin, in one calm view.</p>
+      <div class="mock">
+        <div class="dash-card">
+          <div class="dash-score-ring"><span>82</span></div>
+          <div class="dash-score-label"><strong>Calmer than last week</strong>Skin score, tracked over time</div>
+        </div>
+        <div class="mock-row">
+          <span class="mock-label">Today's Routine</span>
+        </div>
+        <div class="checklist">
+          <div class="checklist-item done"><span class="box">✓</span><span class="label">Cleanse</span></div>
+          <div class="checklist-item done"><span class="box">✓</span><span class="label">Treat — Niacinamide serum</span></div>
+          <div class="checklist-item"><span class="box"></span><span class="label">Moisturize</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-head">
+      <h2>Learn as you go</h2>
+      <p>Bite-sized lessons on the ingredients actually in your products.</p>
+      <div class="edu-list">
+        <div class="edu-item">
+          <div class="edu-text">
+            <h4>Niacinamide 101</h4>
+            <p>What it actually does for acne-prone skin</p>
+          </div>
+          <div class="edu-time">2 min</div>
+        </div>
+        <div class="edu-item">
+          <div class="edu-text">
+            <h4>Why salicylic acid works</h4>
+            <p>The science behind the breakout fighter</p>
+          </div>
+          <div class="edu-time">3 min</div>
+        </div>
+        <div class="edu-item">
+          <div class="edu-text">
+            <h4>Retinoids: how to start slow</h4>
+            <p>Avoiding purging and irritation</p>
+          </div>
+          <div class="edu-time">4 min</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-head positivity">
+      <h2>Why we lead with acne positivity</h2>
+      <div class="stat-box">
+        <div class="stat-num">85%</div>
+        <div class="stat-text">of teenagers experience acne at some point — and more severe acne is linked to higher rates of anxiety and depression, especially among teen girls.</div>
+        <div class="stat-source">American Academy of Dermatology; adolescent mental health research</div>
+      </div>
+      <p>If something affects that many people, it isn't a personal failure — it's just skin. So Glow doesn't open with "fix this." It opens with "let's understand this together": no filters, no before/afters, no flawless-skin fantasy.</p>
+      <p>Acne positivity isn't a nice-to-have feature for us. It's the baseline everything else is built on.</p>
     </section>
 
     <section class="gallery">
@@ -339,8 +793,13 @@
     <section class="signup-cta">
       <h2>Come glow with us</h2>
       <p>Sign up to hear when Glow launches, get early access, and help build the app that teaches you to love your skin — one streak at a time.</p>
-      <a class="btn btn-primary" href="https://docs.google.com/forms/d/e/1FAIpQLSc-uDgn9hiQAlwNbaB6N1YJQjfL8gS4V76rv1bG-pQ3cUV9-A/viewform?usp=header" target="_blank" rel="noopener" style="display:inline-flex;">
-        Join the Waitlist
+      <div class="cta-group">
+        <a class="btn btn-primary" href="https://docs.google.com/forms/d/e/1FAIpQLSc-uDgn9hiQAlwNbaB6N1YJQjfL8gS4V76rv1bG-pQ3cUV9-A/viewform?usp=header" target="_blank" rel="noopener">
+          Join the Waitlist
+        </a>
+      </div>
+      <a class="whatsapp-link" href="https://chat.whatsapp.com/CRLqXeVvA0i3LbHREFQffk" target="_blank" rel="noopener">
+        <span class="dot"></span> Prefer to chat? Join our WhatsApp community
       </a>
     </section>
 
