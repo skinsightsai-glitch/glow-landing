@@ -557,6 +557,49 @@
     margin-left: 1px;
   }
 
+  .badge-pill.fox {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: #FFFFFF;
+    text-align: left;
+  }
+
+  .badge-pill.fox .fox-icon {
+    width: 20px;
+    height: 20px;
+    background: #9E1B32;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: Georgia, "Times New Roman", serif;
+    font-weight: 700;
+    font-size: 13px;
+    border-radius: 3px;
+    flex-shrink: 0;
+  }
+
+  .badge-pill.fox .fox-text {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.25;
+  }
+
+  .badge-pill.fox .fox-name {
+    font-family: Georgia, "Times New Roman", serif;
+    font-weight: 700;
+    font-size: 12px;
+    color: #111111;
+  }
+
+  .badge-pill.fox .fox-sub {
+    font-size: 8px;
+    letter-spacing: 0.07em;
+    color: var(--text-muted);
+    font-weight: 700;
+  }
+
   .gallery {
     padding: 8px 0 44px;
     border-top: 1px solid var(--border);
@@ -859,7 +902,13 @@
       <div class="badges">
         <span class="badge-pill a16z">a16z</span>
         <span class="badge-pill corepower"><span class="cp-dot"></span><span class="cp-text">corepower</span><span class="cp-yoga">YOGA</span></span>
-        <span class="badge-pill">Fox School of Business — Innovation Competition</span>
+        <span class="badge-pill fox">
+          <span class="fox-icon">T</span>
+          <span class="fox-text">
+            <span class="fox-name">Fox School of Business</span>
+            <span class="fox-sub">TEMPLE UNIVERSITY · INNOVATION COMPETITION</span>
+          </span>
+        </span>
       </div>
     </section>
 
